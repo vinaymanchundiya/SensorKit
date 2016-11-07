@@ -8,12 +8,11 @@
 
 import Foundation
 
-public class AccelerometerSensor {
+public class AccelerometerSensor : Sensor {
     let manager = SensorKit.instance.motionManager
     let handler : (Double, Double, Double) -> Void
-    //convenience init(interval: TimeInterval, handler: ((x: Double, y: Double, z: Double) -> ())?) {}
     
-    init(updateInterval: TimeInterval, handler: @escaping (Double, Double, Double) -> Void) {
+    required public init(updateInterval: TimeInterval, handler: @escaping (Double, Double, Double) -> Void) {
         manager.accelerometerUpdateInterval = updateInterval
         self.handler = handler
     }

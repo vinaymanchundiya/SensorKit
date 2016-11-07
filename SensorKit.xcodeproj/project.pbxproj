@@ -11,8 +11,12 @@
 		EF0C96871DCA6EDB0057676E /* SensorKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0C96861DCA6EDB0057676E /* SensorKitTests.swift */; };
 		EF0C96891DCA6EDB0057676E /* SensorKit.h in Headers */ = {isa = PBXBuildFile; fileRef = EF0C967B1DCA6EDB0057676E /* SensorKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF0C96931DCA71430057676E /* SensorKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0C96921DCA71430057676E /* SensorKit.swift */; };
-		EF0C96981DCA71AB0057676E /* AbstractSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0C96971DCA71AB0057676E /* AbstractSensor.swift */; };
+		EF0C96981DCA71AB0057676E /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0C96971DCA71AB0057676E /* Sensor.swift */; };
 		EF0C969A1DCA71BE0057676E /* AccelerometerSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0C96991DCA71BE0057676E /* AccelerometerSensor.swift */; };
+		EFE9A7781DD1364200898F31 /* SensorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE9A7771DD1364200898F31 /* SensorManager.swift */; };
+		EFE9A77B1DD137C100898F31 /* SensingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE9A77A1DD137C100898F31 /* SensingDelegate.swift */; };
+		EFE9A77D1DD1397300898F31 /* SyncSensingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE9A77C1DD1397300898F31 /* SyncSensingDelegate.swift */; };
+		EFE9A77F1DD13BEB00898F31 /* AsyncSensingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE9A77E1DD13BEB00898F31 /* AsyncSensingDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,8 +37,12 @@
 		EF0C96861DCA6EDB0057676E /* SensorKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorKitTests.swift; sourceTree = "<group>"; };
 		EF0C96881DCA6EDB0057676E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF0C96921DCA71430057676E /* SensorKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensorKit.swift; sourceTree = "<group>"; };
-		EF0C96971DCA71AB0057676E /* AbstractSensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractSensor.swift; sourceTree = "<group>"; };
+		EF0C96971DCA71AB0057676E /* Sensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
 		EF0C96991DCA71BE0057676E /* AccelerometerSensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerometerSensor.swift; sourceTree = "<group>"; };
+		EFE9A7771DD1364200898F31 /* SensorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SensorManager.swift; path = Managers/SensorManager.swift; sourceTree = "<group>"; };
+		EFE9A77A1DD137C100898F31 /* SensingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SensingDelegate.swift; path = Delegates/SensingDelegate.swift; sourceTree = "<group>"; };
+		EFE9A77C1DD1397300898F31 /* SyncSensingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SyncSensingDelegate.swift; path = Delegates/SyncSensingDelegate.swift; sourceTree = "<group>"; };
+		EFE9A77E1DD13BEB00898F31 /* AsyncSensingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AsyncSensingDelegate.swift; path = Delegates/AsyncSensingDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +85,9 @@
 		EF0C967A1DCA6EDB0057676E /* SensorKit */ = {
 			isa = PBXGroup;
 			children = (
-				EF0C96941DCA71520057676E /* Controllers */,
+				EFE9A7791DD137AA00898F31 /* Delegates */,
+				EFE9A7761DD1361C00898F31 /* Managers */,
+				EF0C96941DCA71520057676E /* Sensors */,
 				EF0C967B1DCA6EDB0057676E /* SensorKit.h */,
 				EF0C967C1DCA6EDB0057676E /* Info.plist */,
 				EF0C96921DCA71430057676E /* SensorKit.swift */,
@@ -94,13 +104,40 @@
 			path = SensorKitTests;
 			sourceTree = "<group>";
 		};
-		EF0C96941DCA71520057676E /* Controllers */ = {
+		EF0C96941DCA71520057676E /* Sensors */ = {
 			isa = PBXGroup;
 			children = (
-				EF0C96971DCA71AB0057676E /* AbstractSensor.swift */,
+				EF0C96971DCA71AB0057676E /* Sensor.swift */,
 				EF0C96991DCA71BE0057676E /* AccelerometerSensor.swift */,
 			);
+			name = Sensors;
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EFE9A7761DD1361C00898F31 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				EFE9A7771DD1364200898F31 /* SensorManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		EFE9A7791DD137AA00898F31 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				EFE9A7801DD140A900898F31 /* Sensors */,
+			);
+			name = Delegates;
+			sourceTree = "<group>";
+		};
+		EFE9A7801DD140A900898F31 /* Sensors */ = {
+			isa = PBXGroup;
+			children = (
+				EFE9A77A1DD137C100898F31 /* SensingDelegate.swift */,
+				EFE9A77C1DD1397300898F31 /* SyncSensingDelegate.swift */,
+				EFE9A77E1DD13BEB00898F31 /* AsyncSensingDelegate.swift */,
+			);
+			name = Sensors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +252,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFE9A77B1DD137C100898F31 /* SensingDelegate.swift in Sources */,
+				EFE9A77F1DD13BEB00898F31 /* AsyncSensingDelegate.swift in Sources */,
 				EF0C96931DCA71430057676E /* SensorKit.swift in Sources */,
 				EF0C969A1DCA71BE0057676E /* AccelerometerSensor.swift in Sources */,
-				EF0C96981DCA71AB0057676E /* AbstractSensor.swift in Sources */,
+				EF0C96981DCA71AB0057676E /* Sensor.swift in Sources */,
+				EFE9A7781DD1364200898F31 /* SensorManager.swift in Sources */,
+				EFE9A77D1DD1397300898F31 /* SyncSensingDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,17 +8,11 @@
 
 import Foundation
 
-protocol AbstractSensor {
-    
+public protocol Sensor {
     /**
         Initialization for synchronous application.
     */
-    //init(interval: TimeInterval, handler: Any)
-    
-    /**
-        Initialization for asynchronous application.
-    */
-    init(start: NSNotification, end: NSNotification)
+    init(updateInterval: TimeInterval, handler: @escaping (Double, Double, Double) -> Void)
     
     /**
         Start sensor data retrieving.
