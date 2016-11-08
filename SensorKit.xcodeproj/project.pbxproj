@@ -17,6 +17,9 @@
 		EFE9A77B1DD137C100898F31 /* SensingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE9A77A1DD137C100898F31 /* SensingDelegate.swift */; };
 		EFE9A77D1DD1397300898F31 /* SyncSensingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE9A77C1DD1397300898F31 /* SyncSensingDelegate.swift */; };
 		EFE9A77F1DD13BEB00898F31 /* AsyncSensingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE9A77E1DD13BEB00898F31 /* AsyncSensingDelegate.swift */; };
+		EFE9A7841DD145B200898F31 /* SimpleDatabaseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE9A7831DD145B200898F31 /* SimpleDatabaseDelegate.swift */; };
+		EFE9A7861DD145F900898F31 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE9A7851DD145F900898F31 /* DatabaseManager.swift */; };
+		EFE9A7891DD1465800898F31 /* DatabaseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE9A7881DD1465800898F31 /* DatabaseDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		EFE9A77A1DD137C100898F31 /* SensingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SensingDelegate.swift; path = Delegates/SensingDelegate.swift; sourceTree = "<group>"; };
 		EFE9A77C1DD1397300898F31 /* SyncSensingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SyncSensingDelegate.swift; path = Delegates/SyncSensingDelegate.swift; sourceTree = "<group>"; };
 		EFE9A77E1DD13BEB00898F31 /* AsyncSensingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AsyncSensingDelegate.swift; path = Delegates/AsyncSensingDelegate.swift; sourceTree = "<group>"; };
+		EFE9A7831DD145B200898F31 /* SimpleDatabaseDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleDatabaseDelegate.swift; sourceTree = "<group>"; };
+		EFE9A7851DD145F900898F31 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DatabaseManager.swift; path = Managers/DatabaseManager.swift; sourceTree = "<group>"; };
+		EFE9A7881DD1465800898F31 /* DatabaseDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 		EFE9A7761DD1361C00898F31 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				EFE9A7851DD145F900898F31 /* DatabaseManager.swift */,
 				EFE9A7771DD1364200898F31 /* SensorManager.swift */,
 			);
 			name = Managers;
@@ -125,6 +132,7 @@
 		EFE9A7791DD137AA00898F31 /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
+				EFE9A7821DD1458000898F31 /* Storage */,
 				EFE9A7801DD140A900898F31 /* Sensors */,
 			);
 			name = Delegates;
@@ -138,6 +146,15 @@
 				EFE9A77E1DD13BEB00898F31 /* AsyncSensingDelegate.swift */,
 			);
 			name = Sensors;
+			sourceTree = "<group>";
+		};
+		EFE9A7821DD1458000898F31 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				EFE9A7831DD145B200898F31 /* SimpleDatabaseDelegate.swift */,
+				EFE9A7881DD1465800898F31 /* DatabaseDelegate.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,12 +270,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFE9A77B1DD137C100898F31 /* SensingDelegate.swift in Sources */,
+				EFE9A7841DD145B200898F31 /* SimpleDatabaseDelegate.swift in Sources */,
 				EFE9A77F1DD13BEB00898F31 /* AsyncSensingDelegate.swift in Sources */,
 				EF0C96931DCA71430057676E /* SensorKit.swift in Sources */,
 				EF0C969A1DCA71BE0057676E /* AccelerometerSensor.swift in Sources */,
 				EF0C96981DCA71AB0057676E /* Sensor.swift in Sources */,
 				EFE9A7781DD1364200898F31 /* SensorManager.swift in Sources */,
+				EFE9A7891DD1465800898F31 /* DatabaseDelegate.swift in Sources */,
 				EFE9A77D1DD1397300898F31 /* SyncSensingDelegate.swift in Sources */,
+				EFE9A7861DD145F900898F31 /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

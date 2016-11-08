@@ -8,22 +8,25 @@
 
 import Foundation
 
-class SyncSensingDelegate : SensingDelegate {
-    var managedSensors : [Sensor] = [Sensor]()
+// TODO: seriously public???
+public class SyncSensingDelegate : SensingDelegate {
+    public var managedSensors = [Sensor]()
     
-    func addSensor(_ sensor: Sensor) {
+    public func addSensor(_ sensor: Sensor) {
         managedSensors.append(sensor)
     }
     
-    func start() {
+    public func start() {
         for s in managedSensors {
             s.start()
         }
     }
     
-    func stop() {
+    public func stop() {
         for s in managedSensors {
             s.stop()
         }
     }
+    
+    public init() {}
 }

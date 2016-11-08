@@ -20,6 +20,7 @@ public protocol SensorManager {
 
 public extension SensorManager {
     /// It defaults to Synchronous implementation
+
     var sensingDelegate : SensingDelegate {
         return SyncSensingDelegate()
     }
