@@ -10,7 +10,7 @@ import Foundation
 
 public protocol Sensor {
     /**
-        Initialization for synchronous application.
+        Initialization.
     */
     init(updateInterval: TimeInterval, handler: @escaping (Double, Double, Double) -> Void)
     

@@ -8,6 +8,11 @@
 
 import Foundation
 
+/**
+    Delegate of SensorManger protocol.
+    It contains the logic for handling sensors relieving the class
+    that will conform to SensorManager to do that.
+ **/
 public protocol SensingDelegate {
     
     var managedSensors : [Sensor] {get set}

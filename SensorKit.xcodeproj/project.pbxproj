@@ -133,19 +133,19 @@
 			isa = PBXGroup;
 			children = (
 				EFE9A7821DD1458000898F31 /* Storage */,
-				EFE9A7801DD140A900898F31 /* Sensors */,
+				EFE9A7801DD140A900898F31 /* Sensing */,
 			);
 			name = Delegates;
 			sourceTree = "<group>";
 		};
-		EFE9A7801DD140A900898F31 /* Sensors */ = {
+		EFE9A7801DD140A900898F31 /* Sensing */ = {
 			isa = PBXGroup;
 			children = (
 				EFE9A77A1DD137C100898F31 /* SensingDelegate.swift */,
 				EFE9A77C1DD1397300898F31 /* SyncSensingDelegate.swift */,
 				EFE9A77E1DD13BEB00898F31 /* AsyncSensingDelegate.swift */,
 			);
-			name = Sensors;
+			name = Sensing;
 			sourceTree = "<group>";
 		};
 		EFE9A7821DD1458000898F31 /* Storage */ = {

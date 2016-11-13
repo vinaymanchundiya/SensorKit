@@ -11,6 +11,7 @@ import Foundation
 public protocol DatabaseManager {
     var databaseDelegate : DatabaseDelegate {get}
     
+    // TODO: change to JSON serializable or similar
     func store(object: Any)
 }
 
